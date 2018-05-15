@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>adjust deeplinking...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+    <meta name="apple-itunes-app" content="app-id=333903271 app-argument=/newsfeed" />
+</head>
+
+<body>
+
+<iframe id="adj-deep" style="display:none" height=0 width=0></iframe>
+
+<script>
+var frame = document.getElementById('adj-deep');
+// racebook requires path to present
+frame.src = 'twitter://newsfeed?adjust_t=test1';
+
+setTimeout(function() {
+    location.assign('https://itunes.apple.com/app/id333903271?mt=8');
+}, 1000);
+</script>
+
+</body>
+</html>
+
