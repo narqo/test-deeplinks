@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>deeplinking...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+    <meta name="apple-itunes-app" content="app-id=333903271" app-argument=/newsfeed">
+</head>
+
+<body>
+<div id="log"></div>
+<script>
+    var log = document.getElementById('log');
+    function logEvent(e) {
+        log.innerHTML += '<p>' + e.type + '</p>';
+        if (e.error != null) {
+            log.innerHTML += '<p>Error: ' + e.error + '</p>';
+        }
+    }
+
+    logEvent({type: navigator.userAgent});
+</script>
+</body>
+</html>
